@@ -1,3 +1,21 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import *
+
+@admin.register(
+    Employee,
+    Crew,
+    CrewComposition,
+    Region,
+    WheatherData,
+    Airfield,
+    Route,
+    RouteComposition,
+    Aircraft,
+    FlightAssignment,
+    FuelAndLubricants,
+    FuelCapacity,
+    ExpenditureCLM
+)
+class MesaisAdmin(admin.ModelAdmin):
+    pass
